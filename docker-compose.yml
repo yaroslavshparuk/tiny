@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  tinymce:
+    image: ${DOCKER_REGISTRY-}tinymce
+    build:
+      context: .
+      dockerfile: TinyMce/Dockerfile
+
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: WebApi/Dockerfile
+
